@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InAppPurchase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-2T-Trp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="W10-4N-xb8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W10-4N-xb8" id="pAt-eS-0L7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-JP-IFD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-JS-BEX">
+                                        <rect key="frame" x="19" y="21" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qPA-fl-Kts"/>
+                                            <constraint firstAttribute="width" constant="30" id="r5G-Y4-g3P"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="onClickBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fn-Uq-xX7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M6-NG-LjI">
+                                        <rect key="frame" x="99" y="308.5" width="176" height="30"/>
+                                        <state key="normal" title="www.logisticinfotech.com"/>
+                                        <connections>
+                                            <action selector="gotoWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ul3-gl-uiq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwa-9E-zf6">
+                                        <rect key="frame" x="26" y="547" width="323" height="50"/>
+                                        <color key="backgroundColor" red="0.1532186924" green="0.95175179529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="J3a-nd-8IR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <state key="normal" title="Agree">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickAgree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Cc-9z-vyv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hwa-9E-zf6" secondAttribute="trailing" constant="26" id="Acg-jM-78w"/>
+                                    <constraint firstItem="KOn-JS-BEX" firstAttribute="top" secondItem="Vvj-JP-IFD" secondAttribute="top" constant="21" id="Keh-kG-NUs"/>
+                                    <constraint firstItem="KOn-JS-BEX" firstAttribute="leading" secondItem="Vvj-JP-IFD" secondAttribute="leading" constant="19" id="P3X-2M-kz6"/>
+                                    <constraint firstItem="4M6-NG-LjI" firstAttribute="centerY" secondItem="Vvj-JP-IFD" secondAttribute="centerY" id="Qhw-kn-v8f"/>
+                                    <constraint firstItem="hwa-9E-zf6" firstAttribute="leading" secondItem="Vvj-JP-IFD" secondAttribute="leading" constant="26" id="WEd-Sa-XNY"/>
+                                    <constraint firstItem="4M6-NG-LjI" firstAttribute="centerX" secondItem="Vvj-JP-IFD" secondAttribute="centerX" id="XWu-Pc-msg"/>
+                                    <constraint firstAttribute="bottom" secondItem="hwa-9E-zf6" secondAttribute="bottom" constant="50" id="ZjL-MA-vvD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hcb-2T-Trp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NBl-vy-57r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vvj-JP-IFD" secondAttribute="bottom" id="Rcg-tR-fbZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hcb-2T-Trp" secondAttribute="bottom" id="jfF-ax-fZH"/>
+                            <constraint firstItem="hcb-2T-Trp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lis-gV-Nwa"/>
+                            <constraint firstItem="Vvj-JP-IFD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nTZ-jb-1M8"/>
+                            <constraint firstItem="hcb-2T-Trp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oZG-bR-05C"/>
+                            <constraint firstItem="Vvj-JP-IFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pzw-3i-88s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vvj-JP-IFD" secondAttribute="trailing" id="t5G-Kw-D5X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAgree" destination="hwa-9E-zf6" id="ju8-VK-Lae"/>
+                        <outlet property="tblData" destination="hcb-2T-Trp" id="nOR-9T-VoN"/>
+                        <outlet property="viewTermsAndCondition" destination="Vvj-JP-IFD" id="myc-FG-g4b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="15" height="13"/>
+    </resources>
+</document>
